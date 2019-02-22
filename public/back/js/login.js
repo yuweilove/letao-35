@@ -32,18 +32,26 @@ $(function(){
             }
         }
     })
-    // $('#form').on('success.form.bv',function(e){
-    //     e.preventDefault();;//阻止submit的自动提交
-    //     $.ajax({
-    //         // type:'post',
-    //         // data: $('#form').serialize(),
-    //         // url: '/employee/employeeLogin', 
-    //         // dataType:'json',
-    //         // success:function(info){
-    //         //     console.log(info);
-                
-    //         // }
-    //     })
-    // })
+    $('#form').on('success.form.bv',function(e){
+        e.preventDefault();;//阻止submit的自动提交
+        $.ajax({
+            type:'post',
+            data: $('#form').serialize(),
+            url: '/employee/employeeLogin', 
+            dataType:'json',
+            success:function(info){
+                console.log(info);
+                if(info.error===1000){
+                  alert ('用户名错误');
+                }
+                if(info.error===1001){
+                  alert ('密码错误');
+                }
+                if(info.success){
+                  location.href='index.html';
+                }
+            }
+        })
+    })
 
 })
