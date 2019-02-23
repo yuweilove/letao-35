@@ -39,7 +39,7 @@ $(function(){
         }
     })
     $('#form').on('success.form.bv',function(e){
-        e.preventDefault();;//阻止submit的自动提交
+        e.preventDefault();//阻止submit的自动提交
         $.ajax({
             type:'post',
             data: $('#form').serialize(),
