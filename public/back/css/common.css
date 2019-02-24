@@ -103,7 +103,7 @@ a {
     padding-left: 180px;
     padding-top: 50px;
     height: 1500px;
-    background-color: pink;
+    /* background-color: pink; */
     transition: all 1s;
  }
  .lt_main.hidemenu{
@@ -118,6 +118,7 @@ a {
      background-color: #3C8DBC;
      padding-left: 180px;
      transition: all 1s;
+     z-index: 998;
  }
  .lt_topbar.hidemenu{
     padding-left: 0;
@@ -140,3 +141,9 @@ a {
   width: 48%;
   height: 450px;
 } 
+
+.table.table-bordered th,
+.table.table-bordered td {
+  text-align: center;
+  vertical-align: middle;
+}
